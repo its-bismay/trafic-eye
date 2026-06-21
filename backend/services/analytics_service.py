@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 from typing import Dict, Any
-from backend.models.violation import Violation
-from backend.models.vehicle_intelligence import VehicleIntelligenceRecord
+from models.violation import Violation
+from models.vehicle_intelligence import VehicleIntelligenceRecord
 
 class AnalyticsService:
     def get_dashboard_metrics(self, db: Session) -> Dict[str, Any]:

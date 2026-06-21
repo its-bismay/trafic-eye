@@ -1,5 +1,5 @@
 from typing import Dict, Any
-from backend.ml.association import VehiclePersonAssociationEngine
+from ml.association import VehiclePersonAssociationEngine
 
 class AssociationService:
     def __init__(self):

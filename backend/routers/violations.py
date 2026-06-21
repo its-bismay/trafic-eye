@@ -3,15 +3,15 @@ from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.orm import Session, joinedload
 from sqlalchemy import func
 
-from backend.database import get_db
-from backend.models.violation import Violation
-from backend.models.vehicle_intelligence import VehicleIntelligenceRecord
-from backend.models.evidence_bundle import EvidenceBundle
-from backend.models.track_history import TrackHistory
-from backend.schemas import ViolationOut
-from backend.routers.auth import get_current_user
-from backend.models.user import User
-from backend.services.s3_service import storage_service
+from database import get_db
+from models.violation import Violation
+from models.vehicle_intelligence import VehicleIntelligenceRecord
+from models.evidence_bundle import EvidenceBundle
+from models.track_history import TrackHistory
+from schemas import ViolationOut
+from routers.auth import get_current_user
+from models.user import User
+from services.s3_service import storage_service
 
 router = APIRouter(prefix="/violations", tags=["violations"])
 

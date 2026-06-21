@@ -6,10 +6,10 @@ from jose import JWTError, jwt
 import bcrypt
 from sqlalchemy.orm import Session
 
-from backend.database import get_db
-from backend.models.user import User
-from backend.schemas import UserRegister, UserLogin, Token, UserOut, TokenData
-from backend.config import settings
+from database import get_db
+from models.user import User
+from schemas import UserRegister, UserLogin, Token, UserOut, TokenData
+from config import settings
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 

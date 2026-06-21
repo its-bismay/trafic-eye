@@ -7,19 +7,19 @@ from datetime import datetime
 from sqlalchemy.orm import Session
 from typing import Dict, List, Any, Optional
 
-from backend.database import SessionLocal
-from backend.config import settings
-from backend.models.video import Video
-from backend.services.s3_service import storage_service
-from backend.services.ws_manager import ws_manager
-from backend.services.detection_service import detection_service
-from backend.services.tracking_service import TrackingService
-from backend.services.association_service import AssociationService
-from backend.services.ocr_service import ocr_service_instance as ocr_service
-from backend.services.enhancement_service import EnhancementService
-from backend.services.violation_service import ViolationService
-from backend.services.evidence_service import evidence_service
-from backend.services.vehicle_intelligence_service import vehicle_intelligence_service
+from database import SessionLocal
+from config import settings
+from models.video import Video
+from services.s3_service import storage_service
+from services.ws_manager import ws_manager
+from services.detection_service import detection_service
+from services.tracking_service import TrackingService
+from services.association_service import AssociationService
+from services.ocr_service import ocr_service_instance as ocr_service
+from services.enhancement_service import EnhancementService
+from services.violation_service import ViolationService
+from services.evidence_service import evidence_service
+from services.vehicle_intelligence_service import vehicle_intelligence_service
 
 def _send_ws(video_id: str, payload: dict):
     """Synchronous WS broadcast helper safe for background threads."""

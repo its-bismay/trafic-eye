@@ -1,7 +1,7 @@
 import uuid
 from sqlalchemy import Column, String, Float, Integer, ForeignKey, JSON
 from sqlalchemy.orm import relationship
-from backend.database import Base
+from database import Base
 
 class TrackHistory(Base):
     __tablename__ = "track_histories"

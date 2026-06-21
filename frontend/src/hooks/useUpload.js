@@ -63,7 +63,7 @@ export default function useUpload() {
       // Retrieve JWT Token
       const token = localStorage.getItem("token");
       
-      xhr.open("POST", "http://localhost:8000/api/videos/upload");
+      xhr.open("POST", `${import.meta.env.VITE_BACKEND_URL}/api/videos/upload`);
       if (token) {
         xhr.setRequestHeader("Authorization", `Bearer ${token}`);
       }

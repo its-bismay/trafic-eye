@@ -4,11 +4,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pathlib import Path
 
-from backend.config import settings
-from backend.database import engine, Base
-from backend.routers import auth, videos, violations
-from backend.services.ws_manager import ws_manager
-from backend.services.s3_service import storage_service
+from config import settings
+from database import engine, Base
+from routers import auth, videos, violations
+from services.ws_manager import ws_manager
+from services.s3_service import storage_service
 
 # Automatically create database tables if they do not exist
 Base.metadata.create_all(bind=engine)

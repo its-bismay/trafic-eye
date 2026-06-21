@@ -21,7 +21,7 @@ export default function PlateSearch() {
     const token = localStorage.getItem("token");
     if (!token) { navigate("/"); return; }
     try {
-      const res = await fetch(`http://localhost:8000/api/violations?plate=${plate.trim()}`, {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/violations?plate=${plate.trim()}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) { if (res.status === 401) { localStorage.removeItem("token"); navigate("/"); return; } throw new Error("Search failed"); }

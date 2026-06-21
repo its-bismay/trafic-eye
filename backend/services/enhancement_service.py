@@ -1,7 +1,7 @@
 from typing import Tuple, Dict, Any
 import numpy as np
-from backend.ml.quality import QualityAssessmentLayer
-from backend.ml.preprocessor import preprocess_video
+from ml.quality import QualityAssessmentLayer
+from ml.preprocessor import preprocess_video
 
 class EnhancementService:
     def __init__(self):

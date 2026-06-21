@@ -19,7 +19,7 @@ export default function Login() {
     const body     = isRegister ? { name, email, password, role } : { email, password };
 
     try {
-      const res  = await fetch(`http://localhost:8000${endpoint}`, {
+      const res  = await fetch(`${import.meta.env.VITE_BACKEND_URL}${endpoint}`, {
         method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(body),
       });
       const data = await res.json();

@@ -3,8 +3,8 @@ import cv2
 import tempfile
 from typing import Dict, List, Any
 import numpy as np
-from backend.ml.annotator import annotate_frame
-from backend.services.s3_service import storage_service
+from ml.annotator import annotate_frame
+from services.s3_service import storage_service
 
 class EvidenceService:
     def generate_evidence_bundle(self, video_id: str, plate_slug: str, v_type: str, frame_idx: int, timestamp: float, conf: float, render_frame: np.ndarray, detections: List, violations: List) -> Dict[str, Any]:

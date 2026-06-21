@@ -1,7 +1,7 @@
 import uuid
 from sqlalchemy import Column, String, Float, Integer, ForeignKey
 from sqlalchemy.orm import relationship
-from backend.database import Base
+from database import Base
 
 class QualityMetric(Base):
     __tablename__ = "quality_metrics"

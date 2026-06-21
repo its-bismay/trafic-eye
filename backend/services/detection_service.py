@@ -1,6 +1,6 @@
 from typing import List, Dict, Any
 import numpy as np
-from backend.ml.detector import detector
+from ml.detector import detector
 
 class DetectionService:
     def detect(self, frame: np.ndarray) -> List[Dict[str, Any]]:

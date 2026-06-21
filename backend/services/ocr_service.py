@@ -1,6 +1,6 @@
 from typing import List, Dict, Any, Tuple
 import numpy as np
-from backend.ml.ocr_service import ocr_service as ml_ocr_service
+from ml.ocr_service import ocr_service as ml_ocr_service
 
 class OCRService:
     def extract_plate(self, frame_img: np.ndarray, vehicle_bbox: List[int], video_id: str, frame_num: int) -> Tuple[str, float]:

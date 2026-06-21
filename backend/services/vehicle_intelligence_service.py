@@ -1,11 +1,11 @@
 from sqlalchemy.orm import Session
 from typing import List, Dict, Any
-from backend.models.vehicle_intelligence import VehicleIntelligenceRecord
-from backend.models.track_history import TrackHistory
-from backend.models.ocr_history import OCRHistory
-from backend.models.rider_association import RiderAssociation
-from backend.models.evidence_bundle import EvidenceBundle
-from backend.models.violation import Violation
+from models.vehicle_intelligence import VehicleIntelligenceRecord
+from models.track_history import TrackHistory
+from models.ocr_history import OCRHistory
+from models.rider_association import RiderAssociation
+from models.evidence_bundle import EvidenceBundle
+from models.violation import Violation
 
 class VehicleIntelligenceService:
     def create_or_update_vir(self, db: Session, video_id: str, t_id: int, track: Any, evidence_bundles: List[Dict[str, Any]], raw_violations: List[Dict[str, Any]]) -> VehicleIntelligenceRecord:

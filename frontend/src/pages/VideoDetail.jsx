@@ -90,7 +90,7 @@ export default function VideoDetail() {
     if (!token) { navigate("/"); return; }
     setLoadingResults(true);
     try {
-      const res = await fetch(`http://localhost:8000/api/videos/${id}/results`, {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/videos/${id}/results`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) return;
@@ -99,7 +99,7 @@ export default function VideoDetail() {
       setStatus(data.video_metadata.status);
 
       // Fetch new Vehicle Intelligence Records
-      const recRes = await fetch(`http://localhost:8000/api/violations/records/${id}`, {
+      const recRes = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/violations/records/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (recRes.ok) {

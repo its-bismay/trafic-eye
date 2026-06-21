@@ -6,7 +6,7 @@ import shutil
 from pathlib import Path
 import boto3
 from botocore.exceptions import ClientError
-from backend.config import settings
+from config import settings
 
 class StorageService:
     def __init__(self):

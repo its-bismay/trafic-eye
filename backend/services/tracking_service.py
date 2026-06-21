@@ -1,6 +1,6 @@
 from typing import List, Dict, Any
 import numpy as np
-from backend.ml.tracker import ByteTracker
+from ml.tracker import ByteTracker
 
 class TrackingService:
     def __init__(self):

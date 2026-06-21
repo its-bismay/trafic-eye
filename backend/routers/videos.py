@@ -7,14 +7,14 @@ from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException, UploadFile, File, Form, BackgroundTasks, status
 from sqlalchemy.orm import Session
 
-from backend.database import get_db
-from backend.models.video import Video
-from backend.models.violation import Violation
-from backend.schemas import VideoOut, VideoStatusOut, VideoResultsOut
-from backend.routers.auth import get_current_user
-from backend.models.user import User
-from backend.services.s3_service import storage_service
-from backend.workers.process_video import process_video_task
+from database import get_db
+from models.video import Video
+from models.violation import Violation
+from schemas import VideoOut, VideoStatusOut, VideoResultsOut
+from routers.auth import get_current_user
+from models.user import User
+from services.s3_service import storage_service
+from workers.process_video import process_video_task
 
 router = APIRouter(prefix="/videos", tags=["videos"])
 

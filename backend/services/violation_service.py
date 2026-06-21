@@ -1,6 +1,6 @@
 from typing import List, Dict, Any, Optional
 import numpy as np
-from backend.ml.violation_rules import ViolationRulesEngine
+from ml.violation_rules import ViolationRulesEngine
 
 class ViolationService:
     def __init__(self):

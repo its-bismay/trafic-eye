@@ -22,7 +22,7 @@ export default function Dashboard() {
     const token = localStorage.getItem("token");
     if (!token) { navigate("/"); return; }
     try {
-      const res = await fetch("http://localhost:8000/api/videos/my", {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/videos/my`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) {
@@ -39,7 +39,7 @@ export default function Dashboard() {
     if (!token) return;
     setLoadingAnalytics(true);
     try {
-      const res = await fetch("http://localhost:8000/api/violations/analytics/hotspots", {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/violations/analytics/hotspots`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.ok) {
@@ -57,7 +57,7 @@ export default function Dashboard() {
     if (!token) return;
     setLoadingRepeaters(true);
     try {
-      const res = await fetch("http://localhost:8000/api/violations/analytics/repeat-offenders", {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/violations/analytics/repeat-offenders`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.ok) {

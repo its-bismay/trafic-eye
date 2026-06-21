@@ -2,7 +2,7 @@ import uuid
 from datetime import datetime
 from sqlalchemy import Column, String, DateTime, Integer, ForeignKey, JSON
 from sqlalchemy.orm import relationship
-from backend.database import Base
+from database import Base
 
 class VehicleIntelligenceRecord(Base):
     __tablename__ = "vehicle_intelligence_records"
